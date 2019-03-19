@@ -4,10 +4,10 @@
   ChunkIterator.cpp
   CompositeTransform.cpp
   MemAudioFile.cpp
-y:\profiles\desktop\tp4 log2410\codedepart\memaudiofile.cpp(25): warning C4267: '=' : conversion de 'size_t' en 'int', perte possible de données
+x:\bureau\3e session\log2410 (lundi)\git\log2410-labos\tp4\codedepart\memaudiofile.cpp(25): warning C4267: '=' : conversion de 'size_t' en 'int', perte possible de données
   RepeatTransform.cpp
-y:\profiles\desktop\tp4 log2410\codedepart\repeattransform.cpp(15): error C2676: '+=' binaire : 'AbsAudioFile' ne définit pas cet opérateur ou une conversion vers un type acceptable pour l'opérateur prédéfini
   InvertTransform.cpp
   Main.cpp
   Test_TP4.cpp
   Génération de code en cours...
+  PolyVersion.vcxproj -> X:\Bureau\3e session\log2410 (lundi)\git\LOG2410-labos\tp4\CodeDepart\x64\Debug\PolyVersion.exe
