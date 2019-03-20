@@ -11,28 +11,35 @@
 
 CompositeTransform::CompositeTransform(const CompositeTransform & mdd)
 {
-   // A Completer...
+	// A Completer...	
+	for (auto it = mdd.begin(); it != mdd.end(); it++) { addChild(*it); }
 }
 
 // Cloner la transformation composite et ses commandes enfant
 CompositeTransform * CompositeTransform::clone(void) const
 {
-    // A Completer...
-	return nullptr;
+	// A Completer...
+	// Et ses commandes enfants ?? 
+	return new CompositeTransform(*this);
 }
 
 // Executer les transformations enfant
 void CompositeTransform::transform(const Chunk_iterator& c, AbsAudioFile& outFile) const
 {
-	// A Completer...
+	for (int i = 0; i < m_transforms.size(); i++) {
+		m_transforms[i].get()->transform(c, outFile);
+	}
 }
 
 void CompositeTransform::addChild(const AbsTransform& t)
 { 
-	// A Completer...
+	// A Completer...	
+	m_transforms.push_back((TransformPtr)t.clone());
+
 }
 
 void CompositeTransform::removeChild(TransformIterator_const transfIt)
 {
 	// A Completer...
+	m_transforms.erase(transfIt);
 }
