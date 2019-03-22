@@ -9,6 +9,7 @@
 #define _HEADER_COMPOSITE_TRANSFORM_
 
 #include "AbsTransform.h"
+//#include <vector>
 
 class CompositeTransform : public AbsTransform
 {
@@ -30,6 +31,6 @@ public:
 	virtual void removeChild(TransformIterator_const transfIt);
 
 private:
-	TransformContainer m_transforms;
+	Container m_transforms;
 };
 #endif // !defined(_HEADER_COMPOSITE_TRANSFORM_)

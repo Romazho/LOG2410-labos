@@ -14,14 +14,15 @@
 
 // Configuration du stockage des enfants des objets composites
 using TransformPtr = std::unique_ptr<class AbsTransform>;
-using TransformContainer = std::vector<TransformPtr>;
-using TransformBaseIterator = TransformContainer::iterator;
-using TransformBaseIterator_const = TransformContainer::const_iterator;
+using Container = std::vector<TransformPtr>;
+
+using TransformBaseIterator = Container::iterator;
+using TransformBaseIterator_const = Container::const_iterator;
 
 class TransformIterator : public TransformBaseIterator
 {
 public:
-	TransformIterator(const TransformContainer::iterator& it) : TransformBaseIterator(it) {}
+	TransformIterator(const Container::iterator& it) : TransformBaseIterator(it) {}
 
 	// Operateurs simplifiant l'acces a la transformation sur lequel pointe l'iterateur
 	// pour TransformIterator it;
@@ -34,7 +35,7 @@ public:
 class TransformIterator_const : public TransformBaseIterator_const
 {
 public:
-	TransformIterator_const(const TransformContainer::const_iterator& it) : TransformBaseIterator_const(it) {}
+	TransformIterator_const(const Container::const_iterator& it) : TransformBaseIterator_const(it) {}
 
 	// Operateurs simplifiant l'acces a l'objet 3D sur lequel pointe l'iterateur
 	// pour TransformIterator_const it;

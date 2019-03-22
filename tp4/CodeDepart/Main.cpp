@@ -4,6 +4,10 @@
 #include "Test_TP4.h"
 
 int main() {
+
+	//TransformIterator it;
+	//AbsTransform compose;
+
 	try {
 		Test_TP4 TestCorrection;
 
