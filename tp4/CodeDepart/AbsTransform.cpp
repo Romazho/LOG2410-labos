@@ -7,7 +7,7 @@
 
 #include "AbsTransform.h"
 
-TransformContainer AbsTransform::m_empty_transforms;
+Container  AbsTransform::m_empty_transforms;
 
 TransformIterator_const AbsTransform::begin(void) const
 { 

@@ -29,6 +29,6 @@ public:
 
 private:
 	// Vecteur vide de transformation permettant de retourner des iterateurs valides
-	static TransformContainer m_empty_transforms;
+	static Container m_empty_transforms;
 };
 #endif // !defined(_HEADER_ABS_TRANSFORM_)
